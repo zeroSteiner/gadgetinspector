@@ -323,6 +323,11 @@ public class GadgetChainDiscovery {
             return true;
         }
 
+        // see: https://www.synacktiv.com/en/publications/finding-gadgets-like-its-2015-part-2
+        if (method.getClassReference().getName().equals("javax/el/ELProcessor") && method.getName().equals("eval")) {
+            return true;
+        }
+
         return false;
     }
 
